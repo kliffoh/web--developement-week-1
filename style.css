@@ -34,15 +34,44 @@ header {
 
 
 
-body { text-align: left }
+body { 
+  padding: 1px;
+  text-align: left;
+  
+      
+
+
+}
 
 
 
+.kenyan-flag {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  background-image: linear-gradient(to bottom right, white 50%, black 50%);
+  animation: flag-animation 5s infinite;
+}
 
-
-
+@keyframes flag-animation {
+  0% {
+    background-image: linear-gradient(to bottom left, white 50%, black 100%);
+  }
+  25% {
+    background-image: linear-gradient(to top left , white 50%, red 100%);
+  }
+  50% {
+    background-image: linear-gradient(to top right, white 50%, green 100%);
+  }
+  75% {
+    background-image: linear-gradient(to bottom right, white 50%, rgb(253, 4, 4) 100%);
+  }
+  100% {
+    background-image: linear-gradient(to bottom left, white 50%, rgb(0, 0, 0) 100%);
+  }
+}
 
 button {
+  font-family:active;
   background-color: #007bff;
   color: rgb(0, 0, 0);
   padding: 10px 20px;
@@ -62,35 +91,8 @@ button:hover {
   animation:shake 0.3s, colorChange 3s infinite;
 }
 
-@keyframes colorChange {
-  0% {
-    background-color: #ff001e;
-  }
-  25% {
-    background-color: #ee00ff;
-  }
-  50% {
-    background-color: #0055ff;
-  }
-  75% {
-    background-color: #00eeff;
-  }
-  100% {
-    background-color: #00ff8c;
-  }
-  125% {
-    background-color: #2bff00;
-  }
-  150% {
-    background-color: #c8ff00;
-  }
-  175% {
-    background-color: #ffbb00;
-  }
-  200% {
-    background-color: #ff3c00;
-  }
-}
+
+
 
 @keyframes shake {
   0% {
@@ -218,3 +220,56 @@ button:hover {
     color: #030000;
     font-size: 24px;
   }
+  .flag-animation {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flag-wave 3s infinite ease-in-out;
+}
+
+@keyframes flag-wave {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) rotate(-10deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(10deg);
+  }
+  75% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+
+.flag-animation {
+  position: absolute;
+  bottom:-55%;
+  top:auto; 
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flag-wave 3s infinite ease-in-out;
+}
+
+@keyframes flag-wave {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) rotate(-10deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(10deg);
+  }
+  75% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
